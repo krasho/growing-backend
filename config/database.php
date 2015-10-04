@@ -55,8 +55,8 @@ return [
 		'mysql' => [
 			'driver' => 'mysql',
 			'host' => env('DB_HOST', 'localhost'),
-			'database' => env('DB_DATABASE', 'forge'),
-			'username' => env('DB_USERNAME', 'forge'),
+			'database' => env('DB_DATABASE', 'growing'),
+			'username' => env('DB_USERNAME', 'root'),
 			'password' => env('DB_PASSWORD', ''),
 			'charset' => 'utf8',
 			'collation' => 'utf8_unicode_ci',
@@ -67,8 +67,8 @@ return [
 		'pgsql' => [
 			'driver' => 'pgsql',
 			'host' => env('DB_HOST', 'localhost'),
-			'database' => env('DB_DATABASE', 'forge'),
-			'username' => env('DB_USERNAME', 'forge'),
+			'database' => env('DB_DATABASE', 'growing'),
+			'username' => env('DB_USERNAME', 'root'),
 			'password' => env('DB_PASSWORD', ''),
 
 			/*'host' => parse_url(getenv("postgres://fnjopvdorwzqbb:1NwIVee8HISlDtaV5uxiLBL0pR@ec2-54-204-7-145.compute-1.amazonaws.com:5432/d4oa1s0h1162rr"))["host"],
