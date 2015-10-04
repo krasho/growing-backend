@@ -2,8 +2,11 @@
 
 @section("content")
    <section class="second-container">
-       <div class="message">
-           Aqui va la imagen o frase aleatoria del día
+       <div class="new">
+           Aqui va la Noticia
+       </div>
+       <div class="phrase">
+           <p>Aqui va la frase aleatoria <span>Autor</span></p>
        </div>
    </section>
 
