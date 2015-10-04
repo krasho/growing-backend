@@ -66,15 +66,16 @@ return [
 
 		'pgsql' => [
 			'driver' => 'pgsql',
-			//'host' => env('DB_HOST', 'localhost'),
-			//'database' => env('DB_DATABASE', 'forge'),
-			//'username' => env('DB_USERNAME', 'forge'),
-			//'password' => env('DB_PASSWORD', ''),
+			'host' => env('DB_HOST', 'localhost'),
+			'database' => env('DB_DATABASE', 'forge'),
+			'username' => env('DB_USERNAME', 'forge'),
+			'password' => env('DB_PASSWORD', ''),
 
-			'host' => parse_url(getenv("postgres://fnjopvdorwzqbb:1NwIVee8HISlDtaV5uxiLBL0pR@ec2-54-204-7-145.compute-1.amazonaws.com:5432/d4oa1s0h1162rr"))["host"],
+			/*'host' => parse_url(getenv("postgres://fnjopvdorwzqbb:1NwIVee8HISlDtaV5uxiLBL0pR@ec2-54-204-7-145.compute-1.amazonaws.com:5432/d4oa1s0h1162rr"))["host"],
 			'database' => substr(parse_url(getenv("postgres://fnjopvdorwzqbb:1NwIVee8HISlDtaV5uxiLBL0pR@ec2-54-204-7-145.compute-1.amazonaws.com:5432/d4oa1s0h1162rr"))["path"], 1),
 			'username' => parse_url(getenv("postgres://fnjopvdorwzqbb:1NwIVee8HISlDtaV5uxiLBL0pR@ec2-54-204-7-145.compute-1.amazonaws.com:5432/d4oa1s0h1162rr"))["user"],
 			'password' => parse_url(getenv("postgres://fnjopvdorwzqbb:1NwIVee8HISlDtaV5uxiLBL0pR@ec2-54-204-7-145.compute-1.amazonaws.com:5432/d4oa1s0h1162rr"))["pass"],
+			 */
 			'charset' => 'utf8',
 			'prefix' => '',
 			'schema' => 'public',

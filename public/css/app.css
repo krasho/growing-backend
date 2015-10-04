@@ -1,0 +1,61 @@
+body {
+  box-sizing: border-box;
+  font-family: 'Roboto'; }
+
+header {
+  overflow: hidden;
+  margin-top: 1em;
+  position: relative; }
+  header .logo {
+    color: green;
+    float: left;
+    font-weight: bold;
+    font-size: 2.5em;
+    margin-left: 1em;
+    margin-right: .5em; }
+  header .menu {
+    float: left;
+    position: absolute;
+    right: 0px;
+    text-align: center;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 60%; }
+    header .menu ul {
+      list-style: none; }
+      header .menu ul li {
+        display: inline;
+        padding-left: 1em; }
+
+.posts .post {
+  border-bottom: 1px solid gray;
+  margin-top: 1em; }
+  .posts .post .header .title {
+    color: green;
+    font-size: 1.5em;
+    text-align: center; }
+  .posts .post .header .post-information {
+    color: gray; }
+    .posts .post .header .post-information .author {
+      display: inline-block;
+      margin-right: .5em; }
+    .posts .post .header .post-information .publish-date {
+      display: inline-block;
+      margin-right: .5em; }
+    .posts .post .header .post-information .comments {
+      display: inline-block; }
+  .posts .post .body {
+    margin-top: 1em; }
+    .posts .post .body img {
+      max-width: 100%; }
+    .posts .post .body .image-post {
+      margin-bottom: 1em; }
+    .posts .post .body .content {
+      margin-bottom: 2em; }
+    .posts .post .body .link-post {
+      font-size: 1.2em; }
+      .posts .post .body .link-post a {
+        color: green; }
+
+/*# sourceMappingURL=app.css.map */

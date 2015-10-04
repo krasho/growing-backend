@@ -1,2 +1,103 @@
-// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+$text-color: green;
+$post-border-color: gray;
+$text-color-post-information: gray; 
+body {
+	box-sizing: border-box;
+	font-family: 'Roboto';
+}
 
+header{
+	overflow: hidden;
+	margin-top: 1em;
+	position: relative;
+
+	.logo {
+		color: $text-color;
+		float: left;
+		font-weight: bold;
+		font-size: 2.5em;
+		margin-left: 1em;		
+        margin-right: .5em;
+	}
+
+	.menu {		
+		float: left;		
+        position: absolute;
+        right: 0px;
+        text-align: center;
+        top:50%;
+        transform: translateY(-50%);
+        width: 60%;
+
+		ul {
+			list-style: none;
+
+			li {
+				display: inline;
+				padding-left: 1em;
+			}
+		}
+	}
+}
+
+.posts {
+	.post {
+		border-bottom: 1px solid $post-border-color; 
+		margin-top: 1em;		
+
+        .header {
+			.title {
+				color: $text-color;
+				font-size: 1.5em;
+				text-align: center;
+			}
+
+			.post-information {
+				color: $text-color-post-information;			
+
+				.author {
+					display: inline-block;
+					margin-right: .5em;
+				}
+
+				.publish-date {
+					display: inline-block;
+					margin-right: .5em;
+
+				}
+
+				.comments {
+					display: inline-block;
+				}
+
+			}        	
+        }
+
+        .body {
+        	margin-top: 1em;
+
+        	img {
+        		max-width: 100%;        		
+        	}
+
+            .image-post {
+            	margin-bottom: 1em;
+            }
+
+            .content {
+            	margin-bottom: 2em;
+
+            }
+
+            .link-post {            	
+            	font-size: 1.2em;
+
+            	a {
+            		color: $text-color;
+            	}
+ 
+            }
+
+        }
+	}
+}
