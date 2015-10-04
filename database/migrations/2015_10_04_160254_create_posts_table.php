@@ -13,7 +13,7 @@ class CreatePostsTable extends Migration {
 		Schema::create('posts', function (Blueprint $table) {
 			$table->increments('id');
 			$table->string('title', 100);
-			$table->string('author');
+			$table->string('author', 100);
 			$table->bigInteger('publish_date')->unsigned();
 			$table->char('is_draft', 1)->default('Y');
 			$table->string('short_description');
