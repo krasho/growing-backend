@@ -11,69 +11,44 @@
    </section>
 
    <section class="posts">
-       <div class="post">
-          <div class="header">
-              <div class="title">
-                  Título del POST
-              </div>
-              <div class="post-information">
-                  <div class="author">
-                      Krasho
+       @foreach ($posts as $post)
+         <div class="post">
+            <div class="header">
+                <div class="title">
+                    {{ $post->title }} - {{ $post->id }}
+                </div>
+                <div class="post-information">
+                    <div class="author">
+                        {{ $post->author }}
+                    </div>
+                    <div class="publish-date">
+                        {{ $post->publish_date }}
+                    </div>
+                    <div class="comments">
+                        {{ $post->commentsCount }} Comentarios
+                    </div>
+                </div>
+            </div>
+            <div class="body">
+                @if ($post->image)
+                  <div class="image-post">
+                      Imagen del post
                   </div>
-                  <div class="publish-date">
-                      03/10/2015
-                  </div>
-                  <div class="comments">
-                      100 de comentarios
-                  </div>
-              </div>
-          </div>
-          <div class="body">
-              <div class="image-post">
-                  Imagen del post
-              </div>
-              <div class="content">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam beatae veritatis quae adipisci ratione, tempore aut officiis corrupti iste provident, nulla aliquid fuga dolorum voluptatum alias natus quia laborum earum!
+                @endif
 
-              </div>
 
-              <div class="link-post">
-                <a href="#">Ver Post</a>
-              </div>
-          </div>
+                <div class="content">
+                  {{ $post->short_description }}
+                </div>
 
-       </div>
+                <div class="link-post">
+                  <a href="#">Ver Post</a>
+                </div>
+            </div>
 
-       <div class="post">
-          <div class="header">
-              <div class="title">
-                  Título del POST
-              </div>
-              <div class="post-information">
-                  <div class="author">
-                      José Luis Galicia
-                  </div>
-                  <div class="publish-date">
-                      03/10/2015
-                  </div>
-                  <div class="comments">
-                      0 comentarios
-                  </div>
-              </div>
-          </div>
-          <div class="body">
-              <div class="image-post">
-                  Imagen del post
-              </div>
-              <div class="content">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam beatae veritatis quae adipisci ratione, tempore aut officiis corrupti iste provident, nulla aliquid fuga dolorum voluptatum alias natus quia laborum earum!
-              </div>
-              <div class="link-post">
-                <a href="#">Ver Post</a>
-              </div>
-          </div>
+         </div>
 
-       </div>
+       @endforeach
 
    </section>
 @stop

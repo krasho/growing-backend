@@ -1,19 +1,41 @@
 <?php
 
 namespace Growing\Models;
-
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model {
-	//
+	const LIMIT_TO_POSTS = 5;
+
+	/**
+	 * The attributes that should be mutated to dates.
+	 *
+	 * @var array
+	 */
+	protected $dates = ['publish_date'];
 
 	//Relations
 	public function comments() {
 		return $this->hasMany('Growing\Models\Comment');
 	}
 
+	public function commentsCount() {
+		return $this->hasOne('Growing\Models\Comment')
+			->selectRaw("post_id, count(*) as total")
+			->groupBy("post_id");
+	}
+
 	public function postTag() {
 		return $this->belongsToMany('Growing\Models\PostTag', 'post_tags');
 	}
 
+	public function getCommentsCountAttribute() {
+		if (!array_key_exists('commentsCount', $this->relations)) {
+			$this->load('commentsCount');
+		}
+
+		$related = $this->getRelation('commentsCount');
+
+		// then return the count directly
+		return ($related) ? (int) $related->total : 0;
+	}
 }
