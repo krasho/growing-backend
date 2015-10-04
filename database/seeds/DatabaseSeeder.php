@@ -1,5 +1,6 @@
 <?php
 
+use Growing\Models\Phrase;
 use Growing\Models\Tag;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Seeder;
@@ -14,10 +15,10 @@ class DatabaseSeeder extends Seeder {
 		Model::unguard();
 
 		// $this->call(UserTableSeeder::class);
-		//$this->_seedToTag();
-		//$this->call(PostTableSeeder::class);
+		$this->_seedToTag();
+		$this->call(PostTableSeeder::class);
 		$this->call(CommentTableSeeder::class);
-
+		$this->_seedToPhrase;
 		Model::reguard();
 	}
 
@@ -35,5 +36,27 @@ class DatabaseSeeder extends Seeder {
 		$tag = new Tag;
 		$tag->name = "Humanist";
 		$tag->save();
+	}
+
+	private function _seedToPhrase() {
+
+		$phrase = new Phrase;
+		$phrase->name = 'Si cambias la forma en que miras las cosas, las cosas que miras cambian.';
+		$phrase->author = 'Wayne Dyer';
+
+		$phrase->save();
+
+		$phrase = new Phrase;
+		$phrase->name = 'Ve a por el ahora. El futuro no esta prometido a nadie.';
+		$phrase->author = 'Wayne Dyer';
+
+		$phrase->save();
+
+		$phrase = new Phrase;
+		$phrase->name = 'Cuando juzgas a otros, no los defines, te defines a ti mismo.';
+		$phrase->author = 'Wayne Dyer';
+
+		$phrase->save();
+
 	}
 }
