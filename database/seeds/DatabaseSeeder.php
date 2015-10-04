@@ -1,5 +1,6 @@
 <?php
 
+use Growing\Models\Event;
 use Growing\Models\Phrase;
 use Growing\Models\Tag;
 use Illuminate\Database\Eloquent\Model;
@@ -19,7 +20,8 @@ class DatabaseSeeder extends Seeder {
 		$this->call(PostTableSeeder::class);
 		$this->call(CommentTableSeeder::class);
 		$this->call(PostTagTableSeeder::class);
-		$this->_seedToPhrase;
+		$this->_seedToPhrase();
+		$this->_seedToNew();
 		Model::reguard();
 	}
 
@@ -59,5 +61,16 @@ class DatabaseSeeder extends Seeder {
 
 		$phrase->save();
 
+	}
+
+	private function _seedToNew() {
+		$new = new Event();
+		$new->description = "IV taller de desarrollo Humano";
+		$new->image = "";
+		$new->is_draft = "N";
+		$new->start_date = 1443934800;
+		$new->finish_date = 1451538000;
+
+		$new->save();
 	}
 }

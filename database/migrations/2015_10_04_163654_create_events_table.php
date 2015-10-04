@@ -3,14 +3,14 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateNewsTable extends Migration {
+class CreateEventsTable extends Migration {
 	/**
 	 * Run the migrations.
 	 *
 	 * @return void
 	 */
 	public function up() {
-		Schema::create('news', function (Blueprint $table) {
+		Schema::create('events', function (Blueprint $table) {
 			$table->increments('id');
 			$table->mediumText('description');
 			$table->string('image');
@@ -27,6 +27,6 @@ class CreateNewsTable extends Migration {
 	 * @return void
 	 */
 	public function down() {
-		Schema::drop('news');
+		Schema::drop('events');
 	}
 }
