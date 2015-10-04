@@ -10,6 +10,6 @@ class PostTableSeeder extends Seeder {
 	 */
 	public function run() {
 		//
-		factory(apf\Models\Post::class, 10)->create();
+		factory(Growing\Models\Post::class, 10)->create();
 	}
 }

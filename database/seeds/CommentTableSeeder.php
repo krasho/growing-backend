@@ -10,6 +10,6 @@ class CommentTableSeeder extends Seeder {
 	 */
 	public function run() {
 		//
-		factory(apf\Models\Comment::class, 10)->create();
+		factory(Growing\Models\Comment::class, 10)->create();
 	}
 }

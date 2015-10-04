@@ -1,6 +1,6 @@
 <?php
 
-use growing\app\Models\Tag;
+use Growing\Models\Tag;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Seeder;
 
@@ -14,8 +14,8 @@ class DatabaseSeeder extends Seeder {
 		Model::unguard();
 
 		// $this->call(UserTableSeeder::class);
-		$this->_seedToTag();
-		$this->call(PostTableSeeder::class);
+		//$this->_seedToTag();
+		//$this->call(PostTableSeeder::class);
 		$this->call(CommentTableSeeder::class);
 
 		Model::reguard();
@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder {
 	private function _seedToTag() {
 		//Create Records
 		$tag = new Tag;
+
 		$tag->name = "N.L.P.";
 		$tag->save();
 

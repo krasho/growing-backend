@@ -11,7 +11,7 @@
 |
  */
 
-$factory->define(App\User::class, function (Faker\Generator $faker) {
+$factory->define(Growing\User::class, function (Faker\Generator $faker) {
 	return [
 		'name' => $faker->name,
 		'email' => $faker->email,
@@ -21,12 +21,12 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 });
 
 //Post's Factory
-$factory->define(growing\Models\Post::class, function (Faker\Generator $faker) {
+$factory->define(Growing\Models\Post::class, function (Faker\Generator $faker) {
 
 	$description = $faker->text;
 
 	return [
-		'title' => $faker->departmentName,
+		'title' => $faker->streetName,
 		'author' => 'Krasho',
 		'publish_date' => 1443934800,
 		'is_draft' => 'N',
@@ -37,9 +37,9 @@ $factory->define(growing\Models\Post::class, function (Faker\Generator $faker) {
 });
 
 //Comment's Factory
-$factory->define(growing\Models\Comment::class, function (Faker\Generator $faker) {
+$factory->define(Growing\Models\Comment::class, function (Faker\Generator $faker) {
 
-	$post = growing\Models\Post::find()->first();
+	$post = Growing\Models\Post::where('id', '>', 0)->first();
 
 	return [
 		'post_id' => $post->id,

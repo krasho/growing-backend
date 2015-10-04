@@ -1,5 +1,5 @@
 suites:
     main:
-        namespace: App
-        psr4_prefix: App
+        namespace: Growing
+        psr4_prefix: Growing
         src_path: app
