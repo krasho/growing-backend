@@ -1,5 +1,6 @@
 <?php
 
+use growing\app\Models\Tag;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Seeder;
 
@@ -13,9 +14,10 @@ class DatabaseSeeder extends Seeder {
 		Model::unguard();
 
 		// $this->call(UserTableSeeder::class);
-		$this->call(PostTableSeeder::class);
-
 		$this->_seedToTag();
+		$this->call(PostTableSeeder::class);
+		$this->call(CommentTableSeeder::class);
+
 		Model::reguard();
 	}
 
