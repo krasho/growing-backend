@@ -47,3 +47,15 @@ $factory->define(Growing\Models\Comment::class, function (Faker\Generator $faker
 		'description' => $faker->text,
 	];
 });
+
+//Comment's Factory
+$factory->define(Growing\Models\PostTag::class, function (Faker\Generator $faker) {
+
+	$post = Growing\Models\Post::where('id', '>', 0)->first();
+	$tag = Growing\Models\Tag::where('id', '>', 0)->first();
+
+	return [
+		'post_id' => $post->id,
+		'tag_id' => $tag->id,
+	];
+});
