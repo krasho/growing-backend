@@ -1,18 +1,24 @@
 body {
   box-sizing: border-box;
-  font-family: 'Roboto'; }
+  font-family: 'Roboto';
+  margin: 0 0 0 0; }
 
 header {
+  background-color: #CFB590;
+  color: #49281F;
   overflow: hidden;
-  margin-top: 1em;
   position: relative; }
   header .logo {
-    color: green;
+    background: url(../images/logo_mobile.png);
+    background-repeat: no-repeat;
     float: left;
     font-weight: bold;
     font-size: 2.5em;
+    height: 95px;
     margin-left: 1em;
-    margin-right: .5em; }
+    margin-right: .5em;
+    margin-top: .2em;
+    width: 100%; }
   header .menu {
     float: left;
     position: absolute;
@@ -21,18 +27,35 @@ header {
     top: 50%;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
-    width: 60%; }
+    width: 70%; }
     header .menu ul {
       list-style: none; }
       header .menu ul li {
-        display: inline;
+        display: float;
         padding-left: 1em; }
+    header .menu a {
+      color: #49281F;
+      display: block;
+      text-decoration: none;
+      transition: .5%; }
+      header .menu a:hover {
+        background-color: #51392C; }
+
+.second-container {
+  padding: 0 0 0 0; }
+  .second-container .phrase {
+    background-color: #51392C;
+    color: #758918;
+    font-style: italic;
+    padding-left: 1em;
+    padding-right: 1em;
+    text-align: center; }
 
 .posts .post {
   border-bottom: 1px solid gray;
   margin-top: 1em; }
   .posts .post .header .title {
-    color: green;
+    color: #49281F;
     font-size: 1.5em;
     text-align: center; }
   .posts .post .header .post-information {
@@ -56,6 +79,6 @@ header {
     .posts .post .body .link-post {
       font-size: 1.2em; }
       .posts .post .body .link-post a {
-        color: green; }
+        color: #49281F; }
 
 /*# sourceMappingURL=app.css.map */

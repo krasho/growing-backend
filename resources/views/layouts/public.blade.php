@@ -5,13 +5,6 @@
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
 	<title>App Name - @yield('title')</title>
 
-
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
     {!! Html::style("css/app.css",array(), true) !!}
     {!! Html::style("css/app.css") !!}
 
@@ -28,12 +21,12 @@
 <body>
 	<header>
 		<div class="logo">
-			Growing
+
 		</div>
 		<nav class="menu">
            <ul>
-           	<li>Talleres</li>
-           	<li>Quienes Somos</li>
+           	<li><a href="#">Talleres</a></li>
+           	<li><a href="#">Acerca de</a></li>
            </ul>
 		</nav>
 	</header>

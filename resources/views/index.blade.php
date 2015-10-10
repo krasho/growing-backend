@@ -6,7 +6,10 @@
            Aqui va la Noticia
        </div>
        <div class="phrase">
-           <p>Aqui va la frase aleatoria <span>Autor</span></p>
+           @foreach ($phrase as $p)
+              <p>{{ $p->name }} <span>{{ $p->author }}</span></p>
+           @endforeach
+
        </div>
    </section>
 

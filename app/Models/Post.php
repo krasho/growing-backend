@@ -38,4 +38,8 @@ class Post extends Model {
 		// then return the count directly
 		return ($related) ? (int) $related->total : 0;
 	}
+
+	public static function getPredeterminatePosts() {
+		return self::limit(self::LIMIT_TO_POSTS)->orderBy("publish_date", "desc")->get();
+	}
 }

@@ -1,23 +1,42 @@
-$text-color: green;
+//Header section
+$background-color-header: #CFB590;
+$text-color: #49281F;
+$text-color-header: #49281F;
+$background-color-menu-in-hover:#51392C;
+
+
+//second-container
+$background-color-second-container: #51392C;
+$text-color-second-container: #758918;
+
+
+//Post Section
 $post-border-color: gray;
 $text-color-post-information: gray; 
+
 body {
 	box-sizing: border-box;
 	font-family: 'Roboto';
+	margin: 0 0 0 0;	
 }
 
-header{
+header{	
+	background-color: $background-color-header;
+    color : $text-color-header;
 	overflow: hidden;
-	margin-top: 1em;
 	position: relative;
 
 	.logo {
-		color: $text-color;
+		background: url(../images/logo_mobile.png);
+		background-repeat: no-repeat;	
 		float: left;
 		font-weight: bold;
 		font-size: 2.5em;
+		height: 95px;
 		margin-left: 1em;		
         margin-right: .5em;
+        margin-top: .2em;
+        width: 100%;
 	}
 
 	.menu {		
@@ -27,16 +46,45 @@ header{
         text-align: center;
         top:50%;
         transform: translateY(-50%);
-        width: 60%;
+        width: 70%;
 
 		ul {
 			list-style: none;
 
 			li {
-				display: inline;
+				display: float;
 				padding-left: 1em;
 			}
 		}
+
+		a {
+		   color :$text-color-header;	
+		   display: block;
+           text-decoration: none;
+           transition: .5%;
+
+           &:hover {
+           	   background-color: $background-color-menu-in-hover;
+           }
+		}
+
+
+	}
+
+}
+
+.second-container {
+    padding: 0 0 0 0; 	
+   
+	.phrase {
+		background-color: $background-color-second-container; 
+		color: $text-color-second-container;         
+		font-style: italic;
+		padding-left: 1em;
+		padding-right: 1em;
+
+		text-align: center;
+
 	}
 }
 

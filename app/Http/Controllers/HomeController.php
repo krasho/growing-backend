@@ -3,6 +3,8 @@
 namespace Growing\Http\Controllers;
 
 use Growing\Http\Controllers\Controller;
+use Growing\Models\Event;
+use Growing\Models\Phrase;
 use Growing\Models\Post;
 
 class HomeController extends Controller {
@@ -12,10 +14,16 @@ class HomeController extends Controller {
 	 * @return \Illuminate\Http\Response
 	 */
 	public function index() {
+		$event = Event::getEventOnDate();
+
+		$phrase = Phrase::getRandomPhrase();
+
 		//Get First 5 posts
-		$posts = Post::limit(Post::LIMIT_TO_POSTS)->orderBy("publish_date", "desc")->get();
+		$posts = Post::getPredeterminatePosts();
 
 		return View("index", array(
+			"event" => $event,
+			"phrase" => $phrase,
 			"posts" => $posts,
 		));
 
