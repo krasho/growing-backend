@@ -1,4 +1,5 @@
 <?php
+/*if (Config::get('app.debug') == false) {
 $url = parse_url(getenv("DATABASE_URL"));
 $host = $url["host"];
 $username = $url["user"];
@@ -9,7 +10,8 @@ $host = "ec2-54-227-253-238.compute-1.amazonaws.com";
 $username = "ednwjgymjinyeu";
 $password = "f_OUvsrnwlooARXUdEc6uB8PIi";
 $database = "danjrk9fdutuj4";
-
+}
+ */
 return [
 
 	/*
@@ -36,7 +38,7 @@ return [
 	|
 	 */
 
-	'default' => env('DB_CONNECTION', 'pgsql'),
+	'default' => env('DB_CONNECTION', 'mysql'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -75,15 +77,16 @@ return [
 		],
 
 		'pgsql' => [
-			'driver' => 'pgsql',
-			'host' => $host,
-			'database' => $path,
-			'username' => $user,
-			'password' => $password,
+			/*'driver' => 'pgsql',
+		'host' => $host,
+		'database' => $path,
+		'username' => $user,
+		'password' => $password,
 
-			'charset' => 'utf8',
-			'prefix' => '',
-			'schema' => 'public',
+		'charset' => 'utf8',
+		'prefix' => '',
+		'schema' => 'public',
+		 */
 		],
 
 		'sqlsrv' => [
