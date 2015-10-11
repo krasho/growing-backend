@@ -81,7 +81,7 @@ return [
 			'host' => $host,
 			'database' => $path,
 			'username' => $user,
-			'password' => $pass,
+			'password' => $password,
 
 			'charset' => 'utf8',
 			'prefix' => '',
