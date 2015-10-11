@@ -2,9 +2,12 @@
 
 @section("content")
    <section class="second-container">
-       <div class="new">
-           Aqui va la Noticia
-       </div>
+       @if (count($event)>0)
+         <div class="new">
+             Aqui va la Noticia
+         </div>
+       @endif
+
        <div class="phrase">
            @foreach ($phrase as $p)
               <p>{{ $p->name }} <span>{{ $p->author }}</span></p>

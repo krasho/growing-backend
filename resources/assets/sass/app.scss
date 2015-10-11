@@ -2,8 +2,11 @@
 $background-color-header: #CFB590;
 $text-color: #49281F;
 $text-color-header: #49281F;
-$background-color-menu-in-hover:#51392C;
+$background-color-menu-in-hover:#7A654F;
 
+//Menu Mobile
+$background-color-menu:  #51392C;
+$text-color-menu: #758918;
 
 //second-container
 $background-color-second-container: #51392C;
@@ -24,54 +27,90 @@ header{
 	background-color: $background-color-header;
     color : $text-color-header;
 	overflow: hidden;
-	position: relative;
+	position: relative;	
+	
 
 	.logo {
 		background: url(../images/logo_mobile.png);
 		background-repeat: no-repeat;	
-		float: left;
 		font-weight: bold;
 		font-size: 2.5em;
 		height: 95px;
-		margin-left: 1em;		
-        margin-right: .5em;
-        margin-top: .2em;
-        width: 100%;
+        margin: 0 auto; 
+        width: 25%;
+
+        @media screen and (min-width: 768px) {
+		   background: url(../images/logo_tablet.png);
+
+        }
+
+        @media screen and (min-width: 1024px) {
+		   background: url(../images/logo_desktop.png);
+        }
+
 	}
 
-	.menu {		
-		float: left;		
-        position: absolute;
-        right: 0px;
-        text-align: center;
-        top:50%;
-        transform: translateY(-50%);
-        width: 70%;
+	.menu {
+		background: $background-color-menu;	
+		list-style: none;	
+	    margin-bottom: 0;
+	    margin-top: 0;
+		padding-left: 0;
+		padding-top: 0;	
 
-		ul {
-			list-style: none;
+		li {
+			border-bottom: 1px solid rgba($text-color-menu, .2);
 
-			li {
-				display: float;
-				padding-left: 1em;
+			&:last-child {
+				border: none;
 			}
+
 		}
 
 		a {
-		   color :$text-color-header;	
-		   display: block;
-           text-decoration: none;
-           transition: .5%;
+	       color: $text-color-menu;
+	       display: block;
+	       line-height: 3;
+	       padding-left: 1em;
+	       text-decoration: none;
 
-           &:hover {
-           	   background-color: $background-color-menu-in-hover;
-           }
+	       &:hover {
+	       	   background-color: $background-color-menu-in-hover;
+	       }
+
 		}
+
+
+        @media screen and (min-width: 768px) {
+        	display: flex;
+
+        	li {
+        		border-bottom: 0;
+        		border-right: 1px solid rgba($text-color-menu, .2);
+        		flex: auto;
+        		text-align: center
+        	}
+
+        	a {
+        		padding: 0em;
+        	}
+        }
+
+
+	}
+
+	#toggle-menu {
+		background: darken($background-color-menu, 5%);
+		color: $text-color-menu;
+		cursor: pointer;
+		line-height: 2.5em;
+		padding-left: 1em;
 
 
 	}
 
 }
+
 
 .second-container {
     padding: 0 0 0 0; 	

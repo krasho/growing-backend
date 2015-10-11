@@ -11,35 +11,56 @@ header {
   header .logo {
     background: url(../images/logo_mobile.png);
     background-repeat: no-repeat;
-    float: left;
     font-weight: bold;
     font-size: 2.5em;
     height: 95px;
-    margin-left: 1em;
-    margin-right: .5em;
-    margin-top: .2em;
-    width: 100%; }
+    margin: 0 auto;
+    width: 25%; }
+    @media screen and (min-width: 768px) {
+      header .logo {
+        background: url(../images/logo_tablet.png); } }
+    @media screen and (min-width: 1024px) {
+      header .logo {
+        background: url(../images/logo_desktop.png); } }
   header .menu {
-    float: left;
-    position: absolute;
-    right: 0px;
-    text-align: center;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    width: 70%; }
-    header .menu ul {
-      list-style: none; }
-      header .menu ul li {
-        display: float;
-        padding-left: 1em; }
+    background: #51392C;
+    list-style: none;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-left: 0;
+    padding-top: 0; }
+    header .menu li {
+      border-bottom: 1px solid rgba(117, 137, 24, 0.2); }
+      header .menu li:last-child {
+        border: none; }
     header .menu a {
-      color: #49281F;
+      color: #758918;
       display: block;
-      text-decoration: none;
-      transition: .5%; }
+      line-height: 3;
+      padding-left: 1em;
+      text-decoration: none; }
       header .menu a:hover {
-        background-color: #51392C; }
+        background-color: #7A654F; }
+    @media screen and (min-width: 768px) {
+      header .menu {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex; }
+        header .menu li {
+          border-bottom: 0;
+          border-right: 1px solid rgba(117, 137, 24, 0.2);
+          -webkit-flex: auto;
+          -ms-flex: auto;
+          flex: auto;
+          text-align: center; }
+        header .menu a {
+          padding: 0em; } }
+  header #toggle-menu {
+    background: #402d23;
+    color: #758918;
+    cursor: pointer;
+    line-height: 2.5em;
+    padding-left: 1em; }
 
 .second-container {
   padding: 0 0 0 0; }

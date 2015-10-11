@@ -23,13 +23,19 @@
 		<div class="logo">
 
 		</div>
-		<nav class="menu">
-           <ul>
-           	<li><a href="#">Talleres</a></li>
-           	<li><a href="#">Acerca de</a></li>
-           </ul>
-		</nav>
+
+        <div id="toggle-menu">Menú</div>
+	    <nav>
+	       <ul class="menu">
+	       	<li><a href="#">Talleres</a></li>
+	       	<li><a href="#">Entrevistas</a></li>
+	       	<li><a href="#">Quiénes Somos</a></li>
+	       </ul>
+	    </nav>
+
 	</header>
+
+
 
     <div class="container">
     	@yield("content")
@@ -37,5 +43,10 @@
 
 	<footer>
 	</footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    {{ HTML::script('js/menu.js') }}
+
+
 </body>
 </html>
