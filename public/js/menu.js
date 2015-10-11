@@ -3,6 +3,7 @@ $(document).ready(function() {
   $(toggle).next().hide();	
 });
 
+
 $(document).on('click', '#toggle-menu', function (e) {
    $(this).next().slideToggle();
 });
