@@ -5,6 +5,11 @@ $username = $url["user"];
 $password = $url["pass"];
 $database = substr($url["path"], 1);
 
+$host = "ec2-54-227-253-238.compute-1.amazonaws.com";
+$username = "qybglkbrgdgzet";
+$password = "P0uAgbBshZHzBzGn6jF6iOm3n7";
+$database = "d99m2r7rvo0u72";
+
 return [
 
 	/*
@@ -70,13 +75,6 @@ return [
 		],
 
 		'pgsql' => [
-			/*'driver' => 'pgsql',
-			'host' => env('DB_HOST', '127.0.0.1'),
-			'database' => env('DB_DATABASE', 'growing'),
-			'username' => env('DB_USERNAME', 'root'),
-			'password' => env('DB_PASSWORD', ''),
-			 */
-
 			'driver' => 'pgsql',
 			'host' => $host,
 			'database' => $path,
