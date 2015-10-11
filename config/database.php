@@ -1,5 +1,9 @@
 <?php
-
+$url = parse_url(getenv("DATABASE_URL"));
+$host = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$database = substr($url["path"], 1);
 return [
 
 	/*
@@ -65,16 +69,17 @@ return [
 		],
 
 		'pgsql' => [
-			'driver' => 'pgsql',
+			/*'driver' => 'pgsql',
 			'host' => env('DB_HOST', '127.0.0.1'),
 			'database' => env('DB_DATABASE', 'growing'),
 			'username' => env('DB_USERNAME', 'root'),
 			'password' => env('DB_PASSWORD', ''),
+			 */
 
-			'host' => parse_url(getenv("postgres://fnjopvdorwzqbb:1NwIVee8HISlDtaV5uxiLBL0pR@ec2-54-204-7-145.compute-1.amazonaws.com:5432/d4oa1s0h1162rr"))["host"],
-			'database' => substr(parse_url(getenv("postgres://fnjopvdorwzqbb:1NwIVee8HISlDtaV5uxiLBL0pR@ec2-54-204-7-145.compute-1.amazonaws.com:5432/d4oa1s0h1162rr"))["path"], 1),
-			'username' => parse_url(getenv("postgres://fnjopvdorwzqbb:1NwIVee8HISlDtaV5uxiLBL0pR@ec2-54-204-7-145.compute-1.amazonaws.com:5432/d4oa1s0h1162rr"))["user"],
-			'password' => parse_url(getenv("postgres://fnjopvdorwzqbb:1NwIVee8HISlDtaV5uxiLBL0pR@ec2-54-204-7-145.compute-1.amazonaws.com:5432/d4oa1s0h1162rr"))["pass"],
+			'host' => $host,
+			'database' => $path,
+			'username' => $user,
+			'password' => $pass,
 
 			'charset' => 'utf8',
 			'prefix' => '',

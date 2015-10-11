@@ -54,5 +54,4 @@ sftp-config.json
 /node_modules
 Homestead.yaml
 Homestead.json
-/app/config/database.php
 
