@@ -4,6 +4,7 @@ $host = $url["host"];
 $username = $url["user"];
 $password = $url["pass"];
 $database = substr($url["path"], 1);
+
 return [
 
 	/*
@@ -76,6 +77,7 @@ return [
 			'password' => env('DB_PASSWORD', ''),
 			 */
 
+			'driver' => 'pgsql',
 			'host' => $host,
 			'database' => $path,
 			'username' => $user,
