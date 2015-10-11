@@ -73,6 +73,9 @@ header {
 
 .second-container {
   padding: 0 0 0 0; }
+  .second-container .new {
+    height: auto;
+    text-align: center; }
   .second-container .phrase {
     background-color: #51392C;
     color: #758918;

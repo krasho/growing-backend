@@ -15,8 +15,6 @@ class HomeController extends Controller {
 	 */
 	public function index() {
 		$event = Event::getEventOnDate();
-		$pathFile = $this->_getFile($event->image);
-
 		$phrase = Phrase::getRandomPhrase();
 
 		//Get First 5 posts
@@ -32,9 +30,7 @@ class HomeController extends Controller {
 	}
 
 	private function _getFile($image) {
-		$public_path = public_path();
-		return $public_path . '/storage/' . $image;
-
-		//return response()->download($url);
+		$url = '/storage/' . $image;
+		return $url;
 	}
 }

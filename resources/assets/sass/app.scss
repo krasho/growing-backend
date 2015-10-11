@@ -122,6 +122,11 @@ header{
 
 .second-container {
     padding: 0 0 0 0; 	
+
+    .new {
+       height: auto;
+       text-align: center;
+    }
    
 	.phrase {
 		background-color: $background-color-second-container; 
