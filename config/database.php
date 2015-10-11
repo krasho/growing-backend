@@ -5,10 +5,11 @@ $username = $url["user"];
 $password = $url["pass"];
 $database = substr($url["path"], 1);
 
-$host = "ec2-54-227-253-238.compute-1.amazonaws.com";
+/*$host = "ec2-54-227-253-238.compute-1.amazonaws.com";
 $username = "qybglkbrgdgzet";
 $password = "P0uAgbBshZHzBzGn6jF6iOm3n7";
 $database = "d99m2r7rvo0u72";
+ */
 
 return [
 
