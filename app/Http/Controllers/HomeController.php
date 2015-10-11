@@ -15,6 +15,7 @@ class HomeController extends Controller {
 	 */
 	public function index() {
 		$event = Event::getEventOnDate();
+		$pathFile = $this->_getFile($event->image);
 
 		$phrase = Phrase::getRandomPhrase();
 
@@ -25,7 +26,15 @@ class HomeController extends Controller {
 			"event" => $event,
 			"phrase" => $phrase,
 			"posts" => $posts,
+			"pathFile" => $this->_getFile($event->image),
 		));
 
+	}
+
+	private function _getFile($image) {
+		$public_path = public_path();
+		return $public_path . '/storage/' . $image;
+
+		//return response()->download($url);
 	}
 }

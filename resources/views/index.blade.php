@@ -4,7 +4,7 @@
    <section class="second-container">
        @if (count($event)>0)
          <div class="new">
-             Aqui va la Noticia
+            <img src="{{ $pathFile }}">
          </div>
        @endif
 

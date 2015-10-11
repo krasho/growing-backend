@@ -18,7 +18,6 @@ class Event extends Model {
 
 		return self::limit(self::LIMIT_TO_EVENT)->where("start_date", "<=", $date->getTimestamp())
 			->where("finish_date", ">=", $date->getTimestamp())
-			->get();
-
+			->first();
 	}
 }

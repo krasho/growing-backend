@@ -31,27 +31,28 @@ header{
 	
 
 	.logo {
-		background: url(../images/logo_mobile.png);
+		background: url(../images/logo_mobile.png) center;
 		background-repeat: no-repeat;	
 		font-weight: bold;
 		font-size: 2.5em;
 		height: 95px;
         margin: 0 auto; 
-        width: 15%;
+        width: 100%;
 
         @media screen and (min-width: 768px) {
 		   background: url(../images/logo_tablet.png);
+		   background-position: center;
 		   background-repeat: no-repeat;
-		   width: 10%;		
+
+		   width: 100%;
         }
 
         @media screen and (min-width: 1024px) {
 		   background: url(../images/logo_desktop.png);
+		   background-position: center;
 		   background-repeat: no-repeat;
-		   width: 10%;	
+		   width: 100%;
         }
-        
-        outline: 1px solid red;
 	}
 
 	.menu {
