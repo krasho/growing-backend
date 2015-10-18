@@ -31,6 +31,7 @@ class HomeController extends Controller {
 
 	public function post($post) {
 		$post = Post::find($post);
+
 		return View("post", array(
 			"post" => $post,
 		));
