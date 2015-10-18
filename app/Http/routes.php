@@ -17,3 +17,4 @@ return view('index');
  */
 
 Route::get('/', 'HomeController@index');
+Route::get('/post/{post}', 'HomeController@post');

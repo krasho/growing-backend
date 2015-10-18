@@ -29,6 +29,13 @@ class HomeController extends Controller {
 
 	}
 
+	public function post($post) {
+		$post = Post::find($post);
+		return View("post", array(
+			"post" => $post,
+		));
+	}
+
 	private function _getFile($image) {
 		$url = '/storage/' . $image;
 		return $url;

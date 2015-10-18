@@ -48,7 +48,7 @@
                 </div>
 
                 <div class="link-post">
-                  <a href="#">Ver Post</a>
+                  <a href="{{url('/post', $post->id) }}">Ver Post</a>
                 </div>
             </div>
 
