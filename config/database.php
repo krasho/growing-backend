@@ -1,12 +1,6 @@
 <?php
 $url = parse_url(getenv("DATABASE_URL"));
 
-dd($url);
-
-$host = "";
-$username = "";
-$password = "";
-$database = "";
 if (isset($url['host'])) {
 	$host = $url["host"];
 }
@@ -22,6 +16,11 @@ if (isset($url["pass"])) {
 if (isset($url["path"])) {
 	$database = substr($url["path"], 1);
 }
+
+$host = "ec2-54-227-253-238.compute-1.amazonaws.com";
+$username = "ednwjgymjinyeu";
+$password = "f_OUvsrnwlooARXUdEc6uB8PIi";
+$database = "danjrk9fdutuj4";
 
 return [
 
