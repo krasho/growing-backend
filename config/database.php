@@ -1,6 +1,9 @@
 <?php
 $url = parse_url(getenv("DATABASE_URL"));
-
+$host = "";
+$username = "";
+$password = "";
+$database = "";
 if (isset($url['host'])) {
 	$host = $url["host"];
 }
@@ -82,16 +85,16 @@ return [
 		],
 
 		'pgsql' => [
-			/*'driver' => 'pgsql',
-		'host' => $host,
-		'database' => $path,
-		'username' => $user,
-		'password' => $password,
+			'driver' => 'pgsql',
+			'host' => $host,
+			'database' => $path,
+			'username' => $user,
+			'password' => $password,
 
-		'charset' => 'utf8',
-		'prefix' => '',
-		'schema' => 'public',
-		 */
+			'charset' => 'utf8',
+			'prefix' => '',
+			'schema' => 'public',
+
 		],
 
 		'sqlsrv' => [
