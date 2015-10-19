@@ -12,6 +12,7 @@ class Post extends Model {
 	 * @var array
 	 */
 	protected $dates = ['publish_date'];
+	protected $dateFormat = 'U';
 
 	//Relations
 	public function comments() {
@@ -41,5 +42,9 @@ class Post extends Model {
 
 	public static function getPredeterminatePosts() {
 		return self::limit(self::LIMIT_TO_POSTS)->orderBy("publish_date", "desc")->get();
+	}
+
+	public function getPublishDateAttribute($publish_date) {
+		return date("m/d/Y", $publish_date);
 	}
 }
