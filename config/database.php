@@ -89,7 +89,7 @@ return [
 		'pgsql' => [
 			'driver' => 'pgsql',
 			'host' => $host,
-			'database' => $path,
+			'database' => $database,
 			'username' => $user,
 			'password' => $password,
 
