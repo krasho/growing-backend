@@ -90,7 +90,7 @@ return [
 			'driver' => 'pgsql',
 			'host' => $host,
 			'database' => $database,
-			'username' => $user,
+			'username' => $username,
 			'password' => $password,
 
 			'charset' => 'utf8',
