@@ -1,17 +1,13 @@
 <?php
-/*if (Config::get('app.debug') == false) {
-$url = parse_url(getenv("DATABASE_URL"));
-$host = $url["host"];
-$username = $url["user"];
-$password = $url["pass"];
-$database = substr($url["path"], 1);
+if (Config::get('app.debug') == false) {
+	$url = parse_url(getenv("DATABASE_URL"));
+	$host = $url["host"];
+	$username = $url["user"];
+	$password = $url["pass"];
+	$database = substr($url["path"], 1);
 
-$host = "ec2-54-227-253-238.compute-1.amazonaws.com";
-$username = "ednwjgymjinyeu";
-$password = "f_OUvsrnwlooARXUdEc6uB8PIi";
-$database = "danjrk9fdutuj4";
 }
- */
+
 return [
 
 	/*
