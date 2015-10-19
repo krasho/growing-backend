@@ -20,6 +20,11 @@ class HomeController extends Controller {
 		//Get First 5 posts
 		$posts = Post::getPredeterminatePosts();
 
+		$pathFile = "";
+		if (isset($event->image)) {
+			$pathFile = $event->image;
+		}
+
 		return View("index", array(
 			"event" => $event,
 			"phrase" => $phrase,
