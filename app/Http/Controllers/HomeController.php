@@ -29,7 +29,7 @@ class HomeController extends Controller {
 			"event" => $event,
 			"phrase" => $phrase,
 			"posts" => $posts,
-			"pathFile" => $this->_getFile($event->image),
+			"pathFile" => $pathFile,
 		));
 
 	}
