@@ -84,34 +84,68 @@ header {
     padding-right: 1em;
     text-align: center; }
 
-.posts .post {
-  border-bottom: 1px solid gray;
-  margin-top: 1em; }
-  .posts .post .header .title {
-    color: #49281F;
-    font-size: 1.5em;
-    text-align: center; }
-  .posts .post .header .post-information {
-    color: gray; }
-    .posts .post .header .post-information .author {
-      display: inline-block;
-      margin-right: .5em; }
-    .posts .post .header .post-information .publish-date {
-      display: inline-block;
-      margin-right: .5em; }
-    .posts .post .header .post-information .comments {
-      display: inline-block; }
-  .posts .post .body {
+.posts {
+  background: #E1E4E6; }
+  .posts .post {
+    background: #FFF;
     margin-top: 1em; }
-    .posts .post .body img {
-      max-width: 100%; }
-    .posts .post .body .image-post {
-      margin-bottom: 1em; }
-    .posts .post .body .content {
-      margin-bottom: 2em; }
-    .posts .post .body .link-post {
-      font-size: 1.2em; }
-      .posts .post .body .link-post a {
-        color: #49281F; }
+    .posts .post .header .title {
+      color: #49281F;
+      font-size: 1.5em;
+      text-align: center; }
+      .posts .post .header .title a {
+        color: #49281F;
+        text-decoration: none; }
+    .posts .post .header .post-information {
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      color: gray;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+      justify-content: space-around; }
+      .posts .post .header .post-information div {
+        text-align: center; }
+    .posts .post .body {
+      margin-top: 1em; }
+      .posts .post .body img {
+        max-width: 100%; }
+      .posts .post .body .image-post {
+        margin-bottom: 1em; }
+      .posts .post .body .content {
+        margin-bottom: 2em; }
+      .posts .post .body .link-post {
+        font-size: 1.2em; }
+        .posts .post .body .link-post a {
+          color: #49281F; }
+
+.container {
+  margin-top: 1em; }
+  .container .title-post {
+    color: #49281F;
+    font-size: 2em;
+    text-align: center; }
+  .container .post-information {
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: gray;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
+    .container .post-information div {
+      text-align: center; }
+  .container .post-body {
+    margin-left: .5em;
+    margin-right: .5em;
+    margin-top: 1em; }
+  .container .comments-post {
+    margin-top: 1em; }
 
 /*# sourceMappingURL=app.css.map */

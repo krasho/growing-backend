@@ -14,7 +14,8 @@ $text-color-second-container: #758918;
 
 
 //Post Section
-$post-border-color: gray;
+$posts-background: #E1E4E6;
+$post-background: #FFF;
 $text-color-post-information: gray; 
 
 body {
@@ -141,8 +142,9 @@ header{
 }
 
 .posts {
+	background: $posts-background;
 	.post {
-		border-bottom: 1px solid $post-border-color; 
+		background: $post-background;
 		margin-top: 1em;		
 
         .header {
@@ -150,27 +152,24 @@ header{
 				color: $text-color;
 				font-size: 1.5em;
 				text-align: center;
+
+				a {
+					color: $text-color;
+					text-decoration: none;
+
+				}
 			}
 
-			.post-information {
-				color: $text-color-post-information;			
-
-				.author {
-					display: inline-block;
-					margin-right: .5em;
+			.post-information{
+				align-items: center;
+				color: $text-color-post-information;
+				display: flex;
+				justify-content: space-around; 
+     
+				div {
+					text-align: center;
 				}
-
-				.publish-date {
-					display: inline-block;
-					margin-right: .5em;
-
-				}
-
-				.comments {
-					display: inline-block;
-				}
-
-			}        	
+			}
         }
 
         .body {
@@ -200,4 +199,36 @@ header{
 
         }
 	}
+}
+
+.container {
+    margin-top: 1em;	
+	.title-post {
+		color : $text-color;
+		font-size: 2em;
+		text-align: center;
+	}
+
+	.post-information{
+		align-items: center;
+		color: $text-color-post-information;
+		display: flex;
+		justify-content: space-around; 
+
+		div {
+			text-align: center;
+		}
+	}
+
+    .post-body {
+    	margin-left: .5em;
+    	margin-right: .5em;    	
+    	margin-top: 1em;
+    }
+
+    .comments-post {
+    	margin-top: 1em;
+    }
+
+
 }

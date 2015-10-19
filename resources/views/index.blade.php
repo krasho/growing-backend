@@ -21,7 +21,7 @@
          <div class="post">
             <div class="header">
                 <div class="title">
-                    {{ $post->title }} - {{ $post->id }}
+                    <a href="{{url('/post', $post->id) }}">{{ $post->title }}</a>
                 </div>
                 <div class="post-information">
                     <div class="author">
