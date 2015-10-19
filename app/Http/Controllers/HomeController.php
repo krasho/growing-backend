@@ -14,6 +14,9 @@ class HomeController extends Controller {
 	 * @return \Illuminate\Http\Response
 	 */
 	public function index() {
+
+		dd(parse_url(getenv("DATABASE_URL")));
+
 		$event = Event::getEventOnDate();
 		$phrase = Phrase::getRandomPhrase();
 
