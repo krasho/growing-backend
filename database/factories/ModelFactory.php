@@ -1,4 +1,5 @@
 <?php
+use Carbon\Carbon;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,11 +29,13 @@ $factory->define(Growing\Models\Post::class, function (Faker\Generator $faker) {
 	return [
 		'title' => $faker->streetName,
 		'author' => 'Krasho',
-		'publish_date' => 1443934800,
+		'publish_date' => time(),
 		'is_draft' => 'N',
 		'short_description' => substr($description, 1, 100),
 		'description' => $description,
 		'image' => '',
+		'created_at' => Carbon::now(),
+		'updated_at' => Carbon::now(),
 	];
 });
 

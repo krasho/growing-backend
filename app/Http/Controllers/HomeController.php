@@ -14,6 +14,9 @@ class HomeController extends Controller {
 	 * @return \Illuminate\Http\Response
 	 */
 	public function index() {
+
+		dd(time());
+
 		$event = Event::getEventOnDate();
 		$phrase = Phrase::getRandomPhrase();
 

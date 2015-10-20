@@ -8,7 +8,7 @@
          </div>
        @endif
 
-       @if(count($phrase)>0)
+       @if($phrase)
        <div class="phrase">
            @foreach ($phrase as $p)
               <p>{{ $p->name }} <span>{{ $p->author }}</span></p>
@@ -60,4 +60,5 @@
          @endforeach
        @endif
    </section>
+
 @stop

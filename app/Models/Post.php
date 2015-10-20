@@ -1,9 +1,11 @@
 <?php
 
 namespace Growing\Models;
-use Illuminate\Database\Eloquent\Model;
+#use Illuminate\Database\Eloquent\Model;
 
-class Post extends Model {
+use Growing\Models\FixedModel;
+
+class Post extends FixedModel {
 	const LIMIT_TO_POSTS = 5;
 
 	/**
@@ -11,7 +13,7 @@ class Post extends Model {
 	 *
 	 * @var array
 	 */
-	protected $dates = ['publish_date'];
+	//protected $dates = ['publish_date'];
 	protected $dateFormat = 'U';
 
 	//Relations
