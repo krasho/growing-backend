@@ -20,7 +20,7 @@
 </head>
 <body>
 	<header>
-		<div class="logo">
+		<div id="logo" class="logo">
 
 		</div>
 
@@ -48,6 +48,9 @@
 
     {!! HTML::script('js/menu.js') !!}
     {!! Html::script('js/menu.js',array(), true) !!}
+
+    {!! HTML::script('js/app.js') !!}
+    {!! Html::script('js/app.js',array(), true) !!}
 
 </body>
 </html>
