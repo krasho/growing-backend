@@ -15,8 +15,6 @@ class HomeController extends Controller {
 	 */
 	public function index() {
 
-		dd(time());
-
 		$event = Event::getEventOnDate();
 		$phrase = Phrase::getRandomPhrase();
 
