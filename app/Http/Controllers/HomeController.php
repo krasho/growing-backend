@@ -22,7 +22,7 @@ class HomeController extends Controller {
 		$posts = Post::getPredeterminatePosts();
 
 		$pathFile = "";
-		if (isset($event->image)) {
+		if ($event->image) {
 			$pathFile = $this->_getFile($event->image);
 		}
 

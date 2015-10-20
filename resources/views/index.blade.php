@@ -2,7 +2,7 @@
 
 @section("content")
    <section class="second-container">
-       @if (count($event)>0)
+       @if (count($event)>0 and $pathFile)
          <div class="new">
             <img src="{{ $pathFile }}">
          </div>
