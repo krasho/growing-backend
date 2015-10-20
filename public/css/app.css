@@ -8,27 +8,34 @@ header {
   color: #49281F;
   overflow: hidden;
   position: relative; }
-  header .logo {
-    background: url(../images/logo_mobile.png) center;
-    background-repeat: no-repeat;
-    font-weight: bold;
-    font-size: 2.5em;
-    height: 95px;
-    margin: 0 auto;
-    width: 100%;
-    cursor: pointer; }
-    @media screen and (min-width: 768px) {
-      header .logo {
-        background: url(../images/logo_tablet.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        width: 100%; } }
-    @media screen and (min-width: 1024px) {
-      header .logo {
-        background: url(../images/logo_desktop.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        width: 100%; } }
+  header .logo-container {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    header .logo-container .logo {
+      background: url(../images/logo_mobile.png) center;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 2.5em;
+      height: 95px;
+      margin: 0 auto;
+      width: 50%; }
+      @media screen and (min-width: 768px) {
+        header .logo-container .logo {
+          background: url(../images/logo_tablet.png);
+          background-position: center;
+          background-repeat: no-repeat;
+          width: 50%; } }
+      @media screen and (min-width: 1024px) {
+        header .logo-container .logo {
+          background: url(../images/logo_desktop.png);
+          background-position: center;
+          background-repeat: no-repeat;
+          width: 50%; } }
   header .menu {
     background: #51392C;
     list-style: none;

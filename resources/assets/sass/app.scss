@@ -30,32 +30,38 @@ header{
 	overflow: hidden;
 	position: relative;	
 	
+	.logo-container {
+		display: flex;
+		justify-content: center;
 
-	.logo {
-		background: url(../images/logo_mobile.png) center;
-		background-repeat: no-repeat;	
-		font-weight: bold;
-		font-size: 2.5em;
-		height: 95px;
-        margin: 0 auto; 
-        width: 100%;
-        cursor: pointer;
+		.logo {
+			background: url(../images/logo_mobile.png) center;
+			background-repeat: no-repeat;	
+		    cursor: pointer;
+			font-weight: bold;
+			font-size: 2.5em;
+			height: 95px;
+	        margin: 0 auto; 
+	        width: 50%;
 
-        @media screen and (min-width: 768px) {
-		   background: url(../images/logo_tablet.png);
-		   background-position: center;
-		   background-repeat: no-repeat;
+	        @media screen and (min-width: 768px) {
+			   background: url(../images/logo_tablet.png);
+			   background-position: center;
+			   background-repeat: no-repeat;
 
-		   width: 100%;
-        }
+			   width: 50%;
+	        }
 
-        @media screen and (min-width: 1024px) {
-		   background: url(../images/logo_desktop.png);
-		   background-position: center;
-		   background-repeat: no-repeat;
-		   width: 100%;
-        }
+	        @media screen and (min-width: 1024px) {
+			   background: url(../images/logo_desktop.png);
+			   background-position: center;
+			   background-repeat: no-repeat;
+			   width: 50%;
+	        }
+		}
+
 	}
+
 
 	.menu {
 		background: $background-color-menu;	

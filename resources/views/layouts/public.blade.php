@@ -20,8 +20,9 @@
 </head>
 <body>
 	<header>
-		<div id="logo" class="logo">
-
+		<div class="logo-container">
+           <div id="logo" class="logo">
+           </div>
 		</div>
 
         <div id="toggle-menu">Menú</div>
