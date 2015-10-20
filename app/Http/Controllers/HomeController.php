@@ -23,7 +23,7 @@ class HomeController extends Controller {
 
 		$pathFile = "";
 		if (isset($event->image)) {
-			$pathFile = $event->image;
+			$pathFile = $this->_getFile($event->image);
 		}
 
 		return View("index", array(

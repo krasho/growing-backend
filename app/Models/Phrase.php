@@ -12,7 +12,7 @@ class Phrase extends Model {
 	public static function getRandomPhrase() {
 		//return self::limit(self::LIMIT_TO_PHRASE)->orderBy(\DB::raw('RAND()'))->get();
 		//
-		return self::limit(self::LIMIT_TO_PHRASE)->find(1)->get();
+		return self::find(1);
 	}
 
 }

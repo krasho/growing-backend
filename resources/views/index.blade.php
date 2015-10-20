@@ -8,14 +8,13 @@
          </div>
        @endif
 
-       @if($phrase)
-       <div class="phrase">
-           @foreach ($phrase as $p)
-              <p>{{ $p->name }} <span>{{ $p->author }}</span></p>
-           @endforeach
+       @if(isset($phrase))
+         <div class="phrase">
+          <p>{{ $phrase->name }} <span>{{ $phrase->author }}</span></p>
+         </div>
 
-       </div>
        @endif
+
    </section>
 
    <section class="posts">
